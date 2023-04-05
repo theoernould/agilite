@@ -1,0 +1,7 @@
+src\client\model\ClientDao.class
+src\compte\model\CompteDao.class
+src\services\ClientService.class
+src\services\CompteService.class
+src\bdd\BDDBanque.class
+src\compte\model\TypeCompte.class
+src\compte\model\CompteOperationDao.class
