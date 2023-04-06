@@ -4,6 +4,7 @@ import java.util.Map;
 
 import src.bdd.BDDBanque;
 import src.client.model.ClientDao;
+import src.compte.model.CompteOperationDao;
 
 public class ClientService {
 	
@@ -24,6 +25,11 @@ public class ClientService {
 	}
 
 	public void deleteClient(Integer id) {
-		BDDBanque.getBddClient().remove(id+1);
+		BDDBanque.getBddClient().remove(id);
+	}
+
+	public boolean effectuerVirement(CompteOperationDao operation) {
+		return operation.getDestinataire().getIdComptes().add(operation.getId())
+				&& operation.getEmetteur().getIdComptes().add(operation.getId());
 	}
 }
