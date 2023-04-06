@@ -27,7 +27,7 @@ public class BDDBanque {
 		instanceBDDCompte.put(++idCourantCompte, new CompteDao(idCourantCompte, "Mon assurance parce que c'est rentable", new BigDecimal("15"), TypeCompte.ASSURANCE_VIE, new ArrayList<CompteOperationDao>()));
 		instanceBDDCompte.put(++idCourantCompte,
 				new CompteDao(idCourantCompte, "un dernier exemple", new BigDecimal("650000"), TypeCompte.PEL, Arrays.asList(new CompteOperationDao(1, "mon premier virement", new BigDecimal("650000"), null, null))));
-		instanceBDDCompte.put(++idCourantCompte, new CompteDao(idCourantCompte, "Mon compte courant du pauvre", new BigDecimal("10,50"), TypeCompte.COMPTE_COURANT, Arrays.asList(new CompteOperationDao(2, "Oh non les impôts", new BigDecimal("5"), null, null))));
+		instanceBDDCompte.put(++idCourantCompte, new CompteDao(idCourantCompte, "Mon compte courant du pauvre", new BigDecimal("10.50"), TypeCompte.COMPTE_COURANT, Arrays.asList(new CompteOperationDao(2, "Oh non les impôts", new BigDecimal("5"), null, null))));
 	}
 
 	public static Map<Integer, ClientDao> getBddClient() {
